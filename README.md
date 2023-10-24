@@ -9,11 +9,21 @@ Configuración e Instalación
 4. Asegúrate de tener MongoDB en ejecución (Localmente) y configura la cadena de conexión en config.js si es necesario.
 5. Ejecuta la aplicación con "node server.js"
 
+Configuración Slack
+1. Crea una aplicación en Slack y obtén el token de autenticación de la aplicación.
+2. Crea un bot para la aplicación y obtén el token de autenticación del bot.
+3. Agrega el bot a tu espacio de trabajo de Slack.
+4. Agrega el comando /enviar-mensaje a la aplicación y configura la solicitud de comando a la ruta /slack/events.
+5. Activa en APP Home la opción "Allow users to send Slash commands and messages from the messages tab".
+6. Agrega los scopes app_mentions:read, chat:write, commands, im:history, users:read.
+
 Variables de Entorno
 - SLACK_BOT_TOKEN: Token de autenticación del bot de Slack.
 - SLACK_SIGNING_SECRET: Firma secreta de Slack.
 - APP_TOKEN: Token de autenticación de la aplicación.
 - URL_MONGO: Cadena de conexión de MongoDB. Por defecto, se utiliza "mongodb://localhost:27017/slackMessages".
+
+
 
 
 Estructura del Proyecto
